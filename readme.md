@@ -22,5 +22,5 @@
     <li>Open XAMPP Control Panel and start APACHE and SQL Server</li>
     <li>In the browser open localhost/phpmyadmin</li>
     <li>Import databse using src.sql file in project directory</li>
-    <li>In the browser open localhost/project_directory_name and you're ready to go<li>
+    <li>In the browser open localhost/project_directory_name and you're ready to go</li>
 </ul>
