@@ -6,10 +6,10 @@ require_once '../vendor/autoload.php';
 use App\Config;
 
 class Connection {
-    public $connection;
+    public $connect;
 
     public function start() {
-        $this -> connection = new \PDO(
+        $this -> connect = new \PDO(
             "mysql:host=".Config::$host.";dbname=".Config::$dbName.";",
             Config::$username,
             Config::$password,

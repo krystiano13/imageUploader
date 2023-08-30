@@ -20,8 +20,12 @@
     </script>
 </head>
 <body>
-    <?php 
-        echo 'test';
-    ?>
+    <main class="container-fluid row">
+        <form action="" method="post" enctype="multipart/form-data" class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center">
+            <input type="file" class="form-control-file" />
+            <button class="btn btn-primary">Upload</button>
+        </form>
+        <section class="images col-lg-6 col-md-12"></section>
+    </main>
 </body>
 </html>
