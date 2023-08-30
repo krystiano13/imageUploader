@@ -34,7 +34,7 @@
         </form>
         <section class="images col-lg-6 col-md-12 ">
             <div class="container-images">
-             
+
             </div>
         </section>
     </main>
