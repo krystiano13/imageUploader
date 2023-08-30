@@ -8,17 +8,48 @@ main form {
     height : 100%;
     border-right: solid black 1px;
 
+    position: fixed;
+
     @media screen and (max-width : 992px) {
         border-right : none;
         border-bottom : solid black 1px;
+        position : static;
     }
 }
 
 main form input, main form button {
     width : 30%;
     height : 5%;
+    margin-top : 1rem;
+
+    @media screen and (max-width : 992px) {
+        width : 50%;
+    }
+}
+
+main .images {
+    margin-left : 51%;
+    overflow-x: hidden;
+    
+    display : flex;
+    justify-content: center;
+    align-content: center;
+
+    @media screen and (max-width : 992px) {
+        margin-left : 2%;
+    }
+}
+
+.container-images {
+    
 }
 
 main .images img {
-    width : 30%;
+    width : 33%;
+    margin-top : 0.25rem;
+    margin-right : 0rem;
+
+    @media screen and (max-width : 992px) {
+        width : 100%;
+    }
 }
