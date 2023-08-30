@@ -16,7 +16,7 @@ class ComposerStaticInite25c178f84f017a2ed30d35a1365ca66
     public static $prefixDirsPsr4 = array (
         'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/classes',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

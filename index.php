@@ -1,7 +1,7 @@
 <?php
     require_once "./vendor/autoload.php";
     $render = new App\Render();
-    $render -> start();
+    $upload = new App\Upload();
 ?>
 
 <!DOCTYPE html>
@@ -25,13 +25,14 @@
         crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="./index.css" />
-    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
-    <script src="./gallery.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script defer src="./gallery.js"></script>
 </head>
 <body>
     <main class="container-fluid row">
         <form action="" method="post" enctype="multipart/form-data" class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center">
             <input 
+                name="img"
                 accept="image/png, image/gif, image/jpeg" 
                 type="file" 
                 class="form-control-file" 
@@ -39,9 +40,10 @@
             <button class="btn btn-primary">Upload</button>
         </form>
         <section class="images col-lg-6 col-md-12 ">
-            <div class="container-images">
-                
-            </div>
+            <?php 
+                $upload -> send();
+                $render -> start();
+            ?>       
         </section>
     </main>
 </body>

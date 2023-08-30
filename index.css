@@ -29,7 +29,8 @@ main form input, main form button {
 
 main .images {
     margin-left : 51%;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100vh;
     
     display : flex;
     justify-content: center;
@@ -40,14 +41,10 @@ main .images {
     }
 }
 
-.container-images {
-    
-}
 
 main .images img {
     width : 33%;
     margin-top : 0.25rem;
-    margin-right : 0rem;
 
     @media screen and (max-width : 992px) {
         width : 100%;
