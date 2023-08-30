@@ -1,9 +1,8 @@
 <?php
 
-namespace App;
-require_once '../vendor/autoload.php';
 
 final class Image {
+    public int $id;
     public string $src;
     public string $alt;
 
@@ -15,6 +14,6 @@ final class Image {
 
     public function __invoke():string
     {
-        return '<img src="'. $this -> src .'" alt="'. $this -> alt .'" />';
+        return '<img id="'.(string)$this -> id.'" src="'. $this -> src .'" alt="'. $this -> alt .'" />';
     }
 }
