@@ -11,6 +11,7 @@ final class Upload {
 
         $result = $_FILES['img'];
         $code = $result['error'];
+        $uniqId = uniqid("i",true);
 
         if($code !== UPLOAD_ERR_OK) {
             echo "Error occured when Uploading images !!!";
@@ -24,13 +25,13 @@ final class Upload {
                 "INSERT INTO src VALUES(NULL,:src)"
             );
 
-            $query -> bindValue(':src','./src/images/'.$result['name']);
+            $query -> bindValue(':src','./src/images/'.$uniqId.$result['name']);
 
             if(!$query -> execute()) {
                 echo "Error occured when Uploading images !!!"; 
             }
 
-            move_uploaded_file($result['tmp_name'],__DIR__.'/images/'.$result['name']);
+            move_uploaded_file($result['tmp_name'],__DIR__.'/images/'.$uniqId.$result['name']);
         }
 
     }
