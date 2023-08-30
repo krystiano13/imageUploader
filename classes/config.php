@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 class Config {
     static string $host = 'localhost';
